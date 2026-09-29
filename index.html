@@ -1,0 +1,2669 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Từ vựng SGK- Lớp Anh thầy Kết</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8f0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+ header {
+  background-color: #ffd6ba;
+  padding: 15px 20px;
+  font-weight: bold;
+  color: #7a4e3e;
+  display: flex;
+  flex-wrap: wrap;       
+  align-items: center;
+  justify-content: space-between;  /* Left luôn bên trái, center căn giữa */
+  gap: 15px;
+}
+
+/* Left: icon + home text */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;          /* không bị co lại */
+}
+
+.header-left a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 24px;
+  color: #7a4e3e;
+  text-decoration: none;
+}
+
+.header-left a i {
+  font-size: 28px;
+}
+
+/* Center title */
+header {
+  position: relative;
+}
+
+.header-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 32px;
+  margin: 0;
+  white-space: nowrap;
+}
+/* ===== TOP SELECT ===== */
+.top-bar{
+  width:85%;
+  margin:20px auto;
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+.top-bar select{
+  min-width:240px;
+  flex-shrink:0;
+}
+
+.top-bar audio{
+  flex:1;
+  height:42px;
+}
+
+select {
+  padding: 8px 14px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 2px solid #a0e7e5;
+  background-color: #e3fdfd;
+}
+
+
+
+/* MEDIA QUERY cho điện thoại */
+@media (max-width: 480px) {
+
+  .header-center {
+    flex-basis: 100%;
+    order: 2;
+    text-align: center;
+    position: static;
+    transform: none;
+    margin-top: 8px;
+  }
+
+  .header-left {
+    order: 1;
+  }
+
+  /* Lesson + Audio xuống hàng trên điện thoại */
+  .top-bar{
+    flex-direction: column;
+    align-items: stretch;
+    width: 90%;
+  }
+
+  .top-bar select{
+    width: 100%;
+  }
+
+  .top-bar audio{
+    width: 100%;
+  }
+}
+
+  header {
+    padding: 10px 15px;
+  }
+  .header-left a {
+    font-size: 18px;
+  }
+  .header-left a i {
+    font-size: 20px;
+  }
+  .header-center {
+    font-size: 22px;
+  }
+}
+
+
+
+
+  .top-select {
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 40px;
+  }
+
+  select {
+    padding: 8px 14px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 2px solid #a0e7e5;
+    background-color: #e3fdfd;
+  }
+
+  /* Word list */
+  .word-list {
+    width: 85%;
+    margin: 20px auto;
+    background-color: #E0FBE2;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: left;
+    font-size: 22px;
+  }
+
+.word-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 10px;
+  border-bottom: 1px dashed #ffb3ba;
+  transition: background-color .15s ease-in-out;
+}
+.word-row:last-child { border-bottom: none; }
+
+/* Hover đổi màu */
+.word-row:hover {
+  background-color: #fffacd; /* xanh nhạt dễ thấy */
+  cursor: pointer;
+}
+
+  /* Ôn tập */
+  .review-box {
+    margin: 40px auto;
+    width: 70%;
+    background-color: #ffe5ec;
+    padding: 25px;
+    font-weight: bold;
+    color: #607274;
+    font-size: 26px;
+    border-radius: 12px;
+    position: relative;
+  }
+  .review-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 15px;
+}
+.review-buttons button {
+  background-color: #a0e7e5;
+  border: none;
+  padding: 12px 20px;
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.review-buttons button:hover {
+  background-color: #ffb3ba;
+}
+
+
+  /* Bài tập */
+  .exercise {
+    width: 80%;
+    margin: 0 auto 30px auto;
+    font-size: 22px;
+    text-align: left;
+  }
+
+  .exercise input {
+    width: 220px;
+    font-size: 20px;
+    padding: 5px;
+    margin-left: 10px;
+    border-radius: 6px;
+  }
+
+  .exercise button {
+    margin-left: 10px;
+    padding: 6px 12px;
+    font-size: 18px;
+    background-color: #a0e7e5;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .exercise button:hover {
+    background-color: #ffb3ba;
+  }
+
+  .result {
+    font-weight: bold;
+    color: #C5705D;
+    font-size: 20px;
+    margin-left: 10px;
+  }
+
+
+.audio-box{
+  width:80%;
+  margin:40px auto;
+  padding:25px;
+  background:#e3fdfd;
+  border-radius:12px;
+  text-align:center;
+}
+
+.audio-box h2{
+  color:#7a4e3e;
+  margin-bottom:15px;
+}
+
+.audio-box audio{
+  width:100%;
+  max-width:700px;
+}
+
+.audio-note{
+  margin-top:10px;
+  color:#666;
+  font-size:18px;
+}
+
+
+  footer {
+    font-size: 22px;
+    margin-top: 40px;
+    padding: 20px;
+    color: #7a4e3e;
+    background-color: #fff0e1;
+  }
+
+.speaker-icon{
+  margin-left:10px;
+  color:#4a7c59;
+  cursor:pointer;
+  font-size:18px;
+}
+
+.speaker-icon:hover{
+  color:#ff6b6b;
+}
+
+.word-text{
+    display:flex;
+    align-items:flex-start;
+    width:100%;
+}
+
+.en-word{
+    width:420px;      /* chỉnh tăng giảm */
+    flex-shrink:0;
+    font-weight:600;
+}
+
+.vn-word{
+    flex:1;
+}
+
+/* ===== ẨN / HIỆN NGHĨA TỪ VỰNG ===== */
+
+
+.word-list.hide-all-meanings .vn-word {
+    visibility: hidden !important;
+}
+
+/* Từ nào được click để hiện riêng thì hiện lên */
+.word-list.hide-all-meanings .vn-word.show-individual {
+    visibility: visible !important;
+}
+
+.en-word {
+    cursor: pointer;
+}
+
+.en-word:hover {
+    color: #d66b5d;
+}
+
+.en-word {
+    cursor: pointer;
+}
+
+.en-word:hover {
+    color: #d66b5d;
+}
+
+.toggle-meaning-box {
+    width: 85%;
+    margin: 20px auto -5px auto;
+    text-align: left;
+}
+
+#toggleMeaningBtn {
+    background: #ffd6ba;
+    color: #7a4e3e;
+    border: 2px solid #f3b28f;
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+#toggleMeaningBtn:hover {
+    background: #ffb3ba;
+    transform: translateY(-1px);
+}
+
+
+@media (max-width:768px){
+
+  .word-text{
+      display:inline;
+  }
+
+  .en-word{
+      width:auto;
+      min-width:auto;
+      display:inline;
+      font-weight:600;
+  }
+
+  .vn-word{
+      display:inline;
+  }
+
+}
+
+  .confetti {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: red;
+    opacity: .9;
+    animation: pop .9s ease-out forwards;
+  }
+  @keyframes pop {
+    0% { transform: translate(0,0) scale(1); opacity:1;}
+    50% {transform: translate(calc(var(--x)*.5),calc(var(--y)*.4)) scale(1.1);opacity:1;}
+    100% {transform: translate(var(--x),var(--y)) scale(.5);opacity:0;}
+  }
+
+
+css
+/* =========================================================
+   🐸 FROG VOCABULARY GAME
+   ========================================================= */
+
+.frog-game-section {
+  width: 100%;
+  max-width: 1100px;
+  margin: 50px auto 60px;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.frog-game-title {
+  font-size: 28px;
+  color: #47785c;
+  margin-bottom: 8px;
+}
+
+.frog-game-subtitle {
+  color: #718078;
+  font-size: 17px;
+  margin-bottom: 18px;
+}
+
+/* GAME BOX */
+.frog-game {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1050px;
+  height: 560px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 28px;
+  border: 4px solid #a8d8b5;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,.55) 0 5px, transparent 6px),
+    linear-gradient(
+      to bottom,
+      #c9f2e3 0%,
+      #b6e7d7 45%,
+      #8ed0bd 75%,
+      #71b69f 100%
+    );
+  box-shadow: 0 12px 35px rgba(69,120,91,.18);
+}
+
+/* ánh sáng mặt nước */
+.frog-game::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 70% 30%, rgba(255,255,255,.28), transparent 30%),
+    radial-gradient(ellipse at 25% 75%, rgba(255,255,255,.18), transparent 25%);
+  pointer-events: none;
+}
+
+/* Bọt nước */
+.water-bubble {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 2px solid rgba(255,255,255,.55);
+  border-radius: 50%;
+  animation: bubbleUp 5s infinite ease-in;
+  opacity: .7;
+}
+
+.water-bubble.b1 {
+  left: 12%;
+  bottom: 30px;
+  animation-delay: .5s;
+}
+
+.water-bubble.b2 {
+  left: 75%;
+  bottom: 50px;
+  animation-delay: 2s;
+}
+
+.water-bubble.b3 {
+  left: 48%;
+  bottom: 20px;
+  animation-delay: 3.2s;
+}
+
+@keyframes bubbleUp {
+  0% {
+    transform: translateY(0) scale(.7);
+    opacity: 0;
+  }
+  30% { opacity: .8; }
+  100% {
+    transform: translateY(-260px) scale(1.3);
+    opacity: 0;
+  }
+}
+
+/* SCORE */
+.frog-score {
+  position: absolute;
+  top: 15px;
+  left: 18px;
+  z-index: 20;
+  background: rgba(255,255,255,.82);
+  padding: 9px 15px;
+  border-radius: 14px;
+  color: #47785c;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+/* nghĩa tiếng Việt */
+.frog-question {
+  position: absolute;
+  z-index: 15;
+  top: 58px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 280px;
+  max-width: 75%;
+  padding: 15px 25px;
+  background: rgba(255,255,255,.91);
+  border: 3px solid #91c9a4;
+  border-radius: 18px;
+  color: #47785c;
+  font-size: 27px;
+  font-weight: bold;
+  box-shadow: 0 7px 20px rgba(58,107,78,.15);
+}
+
+/* Khu vực ruồi */
+.fly-zone {
+  position: absolute;
+  inset: 125px 20px 150px;
+}
+
+/* RUỒI */
+.vocab-fly {
+  position: absolute;
+  z-index: 10;
+
+  /* Toàn bộ bảng là vùng click */
+  cursor: pointer;
+  user-select: none;
+
+  /* Không cho double tap trên điện thoại */
+  touch-action: manipulation;
+
+  transition:
+    transform .18s ease,
+    filter .18s ease;
+
+  animation: flyMove 4s ease-in-out infinite alternate;
+}
+
+/* Rê chuột vào → nổi lên */
+.vocab-fly:hover {
+  transform: scale(1.12);
+  filter: brightness(1.06);
+  z-index: 30;
+}
+
+/* Làm rõ đây là một nút */
+.vocab-fly:active {
+  transform: scale(.96);
+}
+
+.vocab-fly:hover {
+  transform: scale(1.12);
+}
+
+.fly-body {
+  position: relative;
+
+  /* Kích thước bảng vừa phải */
+  min-width: 120px;
+  max-width: 180px;
+
+  /* Toàn bộ bảng là nút */
+  padding: 11px 15px;
+
+  background: rgba(255,255,255,.95);
+
+  border: 3px solid #668a77;
+  border-radius: 16px;
+
+  color: #3e5d4b;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  text-align: center;
+
+  box-shadow:
+    0 5px 13px rgba(0,0,0,.14);
+
+  /* Rất quan trọng:
+     vùng click bao phủ toàn bảng */
+  box-sizing: border-box;
+}
+
+
+.fly-body::before,
+.fly-body::after {
+  content: "";
+  position: absolute;
+  width: 17px;
+  height: 12px;
+  background: rgba(255,255,255,.8);
+  border: 2px solid #7b9c8a;
+  border-radius: 50%;
+  top: -9px;
+}
+
+.fly-body::before {
+  left: 12px;
+  transform: rotate(-25deg);
+}
+
+.fly-body::after {
+  right: 12px;
+  transform: rotate(25deg);
+}
+
+/* icon ruồi */
+.fly-face {
+  font-size: 25px;
+  display: block;
+  margin-bottom: 4px;
+  pointer-events: none;
+}
+
+/* Các vị trí ban đầu */
+.fly-0 {
+  left: 5%;
+  top: 8%;
+  animation-duration: 3.7s;
+}
+
+.fly-1 {
+  right: 5%;
+  top: 10%;
+  animation-duration: 4.3s;
+  animation-delay: -.8s;
+}
+
+.fly-2 {
+  left: 35%;
+  top: 42%;
+  animation-duration: 3.3s;
+  animation-delay: -1.5s;
+}
+
+.fly-3 {
+  right: 12%;
+  bottom: 5%;
+  animation-duration: 4.8s;
+  animation-delay: -.4s;
+}
+
+@keyframes flyMove {
+  0% {
+    transform: translate(0,0) rotate(-3deg);
+  }
+  25% {
+    transform: translate(25px,-18px) rotate(4deg);
+  }
+  50% {
+    transform: translate(-20px,25px) rotate(-4deg);
+  }
+  75% {
+    transform: translate(30px,15px) rotate(3deg);
+  }
+  100% {
+    transform: translate(-15px,-20px) rotate(-2deg);
+  }
+}
+
+/* ẾCH */
+.frog-character {
+  position: absolute;
+  z-index: 25;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 125px;
+  transition: transform .3s ease;
+}
+
+/* lá sen */
+.lily-pad {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 245px;
+  height: 80px;
+  background: #70ad78;
+  border-radius: 50%;
+  box-shadow:
+    inset -8px -8px 0 rgba(45,110,66,.18),
+    0 8px 15px rgba(0,0,0,.12);
+}
+
+.lily-pad::after {
+  content: "";
+  position: absolute;
+  right: 40px;
+  top: -5px;
+  width: 80px;
+  height: 65px;
+  background: #8bc38c;
+  clip-path: polygon(0 50%,100% 0,100% 100%);
+}
+
+/* thân ếch */
+.frog-body {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 105px;
+  height: 78px;
+  background: #65a968;
+  border-radius: 50% 50% 42% 42%;
+  border: 4px solid #477e50;
+  box-shadow: inset -8px -8px rgba(48,107,57,.15);
+}
+
+/* mắt */
+.frog-eye {
+  position: absolute;
+  top: -25px;
+  width: 38px;
+  height: 38px;
+  background: #75b875;
+  border: 4px solid #477e50;
+  border-radius: 50%;
+}
+
+.frog-eye.left {
+  left: 8px;
+}
+
+.frog-eye.right {
+  right: 8px;
+}
+
+.frog-eye::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 14px;
+  background: #17241a;
+  border-radius: 50%;
+  left: 11px;
+  top: 9px;
+}
+
+/* miệng */
+.frog-mouth {
+  position: absolute;
+  z-index: 10;
+  width: 55px;
+  height: 22px;
+  border-bottom: 4px solid #305f38;
+  border-radius: 50%;
+  left: 25px;
+  top: 38px;
+}
+
+/* lưỡi */
+.frog-tongue {
+  position: absolute;
+  z-index: 50;
+
+  left: 0;
+  top: 0;
+
+  width: 0;
+
+  background: #ef7991;
+  border-radius: 999px;
+
+  pointer-events: none;
+
+  opacity: 0;
+  transition:
+    width 0.28s cubic-bezier(.2,.8,.2,1),
+    opacity 0.05s;
+}
+
+.frog-tongue.active {
+  opacity: 1;
+}
+
+
+/* ẾCH lớn nhỏ */
+.frog-character.grow1 {
+  transform: translateX(-50%) scale(1.08);
+}
+
+.frog-character.grow2 {
+  transform: translateX(-50%) scale(1.17);
+}
+
+.frog-character.grow3 {
+  transform: translateX(-50%) scale(1.28);
+}
+
+.frog-character.shrink1 {
+  transform: translateX(-50%) scale(.91);
+}
+
+.frog-character.shrink2 {
+  transform: translateX(-50%) scale(.76);
+}
+
+/* popup */
+.frog-message {
+  position: absolute;
+  z-index: 50;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(47,91,68,.25);
+  backdrop-filter: blur(3px);
+}
+
+.frog-message.show {
+  display: flex;
+}
+
+.frog-message-box {
+  background: rgba(255,255,255,.96);
+  border-radius: 25px;
+  padding: 28px 35px;
+  width: min(420px, 75%);
+  box-shadow: 0 12px 35px rgba(0,0,0,.2);
+}
+
+.frog-message-box h2 {
+  color: #47785c;
+  margin: 0 0 10px;
+  font-size: 30px;
+}
+
+.frog-message-box p {
+  color: #66756d;
+  font-size: 18px;
+}
+
+.frog-restart {
+  border: none;
+  background: #79b982;
+  color: white;
+  padding: 11px 25px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.frog-restart:hover {
+  background: #5e9e68;
+}
+
+/* responsive */
+@media(max-width:600px) {
+
+  .frog-game-section {
+    width: 100%;
+    max-width: 100%;
+    margin: 40px auto 50px;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .frog-game {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+    border-radius: 20px;
+    box-sizing: border-box;
+  }
+
+  .frog-question {
+    top: 55px;
+    font-size: 21px;
+    min-width: 0;
+    width: 72%;
+    padding: 11px 15px;
+  }
+
+  .fly-zone {
+    inset: 120px 8px 140px;
+  }
+
+  .fly-body {
+    min-width: 92px;
+    max-width: 135px;
+    padding: 8px 10px;
+    font-size: 14px;
+    border-width: 2px;
+  }
+
+  .vocab-fly {
+    min-height: 55px;
+  }
+
+  .fly-body span {
+    pointer-events: none;
+  }
+
+  .fly-face {
+    font-size: 21px;
+  }
+
+  .frog-character {
+    transform: translateX(-50%) scale(.82);
+  }
+
+  .frog-character.grow1 {
+    transform: translateX(-50%) scale(.90);
+  }
+
+  .frog-character.grow2 {
+    transform: translateX(-50%) scale(.98);
+  }
+
+  .frog-character.grow3 {
+    transform: translateX(-50%) scale(1.06);
+  }
+
+  .lily-pad {
+    width: 205px;
+  }
+}
+
+  .frog-question {
+    top: 55px;
+    font-size: 21px;
+    min-width: 0;
+    width: 72%;
+    padding: 11px 15px;
+  }
+
+  .fly-zone {
+    inset: 120px 8px 140px;
+  }
+
+.fly-body {
+  min-width: 92px;
+  max-width: 135px;
+  padding: 8px 10px;
+  font-size: 14px;
+  border-width: 2px;
+}
+
+.vocab-fly {
+  /* vùng nút đủ lớn để ngón tay dễ bấm */
+  min-height: 55px;
+}
+
+.fly-body span {
+  pointer-events: none;
+}
+
+  .fly-face {
+    font-size: 21px;
+  }
+
+  .frog-character {
+    transform: translateX(-50%) scale(.82);
+  }
+
+  .frog-character.grow1 {
+    transform: translateX(-50%) scale(.90);
+  }
+
+  .frog-character.grow2 {
+    transform: translateX(-50%) scale(.98);
+  }
+
+  .frog-character.grow3 {
+    transform: translateX(-50%) scale(1.06);
+  }
+
+  .lily-pad {
+    width: 205px;
+  }
+}
+
+
+.frog-start-icon {
+  font-size: 70px;
+  margin-bottom: 8px;
+  animation: frogStartBounce 1.2s ease-in-out infinite;
+}
+
+@keyframes frogStartBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.frog-restart {
+  border: none;
+  cursor: pointer;
+  padding: 13px 30px;
+  border-radius: 999px;
+
+  font-size: 17px;
+  font-weight: 800;
+
+  background: #fff;
+  color: #218c74;
+
+  box-shadow:
+    0 5px 0 rgba(0,0,0,.15),
+    0 8px 20px rgba(0,0,0,.15);
+
+  transition: .18s ease;
+}
+
+.frog-restart:hover {
+  transform: translateY(-3px) scale(1.04);
+}
+
+.frog-restart:active {
+  transform: translateY(2px);
+  box-shadow:
+    0 2px 0 rgba(0,0,0,.15);
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-left">
+    <a href="https://ketng91.github.io/TuvungTHPTQG-homepage/">
+      <i class="fa-solid fa-house"></i> Lớp Anh thầy Kết
+    </a>
+  </div>
+  <div class="header-center">
+    Từ vựng bài học
+  </div>
+</header>
+
+<!-- Bộ chọn -->
+<!-- Bộ chọn + Audio -->
+<div class="top-bar">
+
+  <select id="wordList">
+    <option value="1">Từ vựng SGK -1</option>
+    <option value="2">Từ vựng SGK -2</option>
+    <option value="2">Từ vựng SGK -2</option>
+    <option value="2">Từ vựng SGK -2</option>
+    <option value="2">Từ vựng SGK -2</option>
+    <option value="2">Từ vựng SGK -2</option>
+    <option value="2">Từ vựng SGK -2</option>
+    <option value="2">Từ vựng SGK -2</option>
+    <option value="2">Từ vựng SGK -2</option>
+    <option value="2">Từ vựng SGK -2</option>
+
+  </select>
+
+  <audio id="lessonAudio" controls>
+    <source src="" type="audio/mpeg">
+  </audio>
+
+</div>
+
+<!-- NÚT HIỆN / ẨN NGHĨA -->
+<div class="toggle-meaning-box">
+  <button id="toggleMeaningBtn" onclick="toggleAllMeanings()">
+    🙈 Ẩn nghĩa
+  </button>
+</div>
+
+
+<script>
+// Bắt sự kiện Enter cho tất cả các ô input trong bài tập
+document.addEventListener("DOMContentLoaded", function() {
+  const exerciseInputs = document.querySelectorAll(".exercise input");
+
+  exerciseInputs.forEach(input => {
+    input.addEventListener("keydown", function(e) {
+      if (e.key === "Enter") {      // Kiểm tra nếu nhấn Enter
+        e.preventDefault();          // Ngăn việc xuống dòng mặc định
+        const checkBtn = this.nextElementSibling; // giả định nút Check ngay sau input
+        if (checkBtn && checkBtn.tagName === "BUTTON") {
+          checkBtn.click();         // kích hoạt nút Check
+        }
+      }
+    });
+  });
+});
+</script>
+
+
+
+<!-- Danh sách từ vựng -->
+<div class="word-list" id="wordContainer"></div>
+
+<!-- Ôn tập -->
+<div class="review-box">
+<div id="progressCounter"
+     style="position:absolute; top:12px; right:18px;
+            font-size:18px; color:#7a4e3e;">
+  Đã biết 0 / 0
+</div>
+<div style="margin:15px 0;">
+
+<button id="btnVNEN"
+        onclick="setMode('vn-en')">
+
+Việt ➜ Anh
+
+</button>
+
+<button id="btnENVN"
+        onclick="setMode('en-vn')">
+
+Anh ➜ Việt
+
+</button>
+
+</div>
+
+  <div id="vietWord">Chọn hiển thị Việt Anh/Anh Việt để bắt đầu</div>
+    
+  <!-- Hiển thị đáp án -->
+<div id="answer" style="font-size:22px;color:#7a4e3e; margin-top:15px; text-align:center; min-height:40px;"></div>
+   
+  <!-- Nút bấm -->
+  <div class="review-buttons" style="margin-top:20px;">
+    <button onclick="know()">Đã biết</button>
+    <button onclick="dontKnow()">Chưa biết</button>
+    <button onclick="nextWord()">Tiếp theo</button>
+  </div>
+
+</div>
+
+<!-- Bài tập -->
+<div class="exercise" id="exercise"></div>
+
+<!-- =====================================================
+     🐸 GAME: ẾCH SĂN RUỒI TỪ VỰNG
+     ===================================================== -->
+
+<section class="frog-game-section">
+
+  <div class="frog-game-title">
+    🐸 Frog Vocabulary Hunt
+  </div>
+
+  <div class="frog-game-subtitle">
+    Ếch hãy ăn đúng con ruồi mang từ tiếng Anh phù hợp với nghĩa!
+  </div>
+
+  <div class="frog-game" id="frogGame">
+
+    <!-- SCORE -->
+    <div class="frog-score" id="frogScore">
+      🔥 Liên tục: 0/10
+    </div>
+
+    <!-- NGHĨA TIẾNG VIỆT -->
+    <div class="frog-question" id="frogQuestion">
+      Chuẩn bị...
+    </div>
+
+    <!-- BONG BÓNG -->
+    <div class="water-bubble b1"></div>
+    <div class="water-bubble b2"></div>
+    <div class="water-bubble b3"></div>
+
+    <!-- 4 CON RUỒI -->
+    <div class="fly-zone" id="flyZone"></div>
+
+    <!-- LƯỠI -->
+    <div class="frog-tongue" id="frogTongue"></div>
+
+    <!-- ẾCH + LÁ SEN -->
+    <div class="frog-character" id="frogCharacter">
+
+      <div class="lily-pad"></div>
+
+      <div class="frog-body">
+
+        <div class="frog-eye left"></div>
+        <div class="frog-eye right"></div>
+
+        <div class="frog-mouth"></div>
+
+      </div>
+
+    </div>
+
+    <!-- END / WIN -->
+    <div class="frog-message show" id="frogMessage">
+  <div class="frog-message-box">
+
+    <div class="frog-start-icon">🐸</div>
+
+    <h2 id="frogMessageTitle">
+      Frog Vocabulary Hunt
+    </h2>
+
+    <p id="frogMessageText">
+      🪰 Hãy chọn đúng con ruồi mang từ tiếng Anh phù hợp với nghĩa được cho.<br><br>
+      🔥 Đúng liên tiếp 10 câu để chiến thắng!<br>
+      ❌ Sai 2 lần liên tiếp sẽ kết thúc game.
+    </p>
+
+    <button
+      class="frog-restart"
+      id="frogStartBtn"
+      onclick="startFrogGame()">
+      ▶️ START GAME
+    </button>
+
+  </div>
+</div>
+
+
+  </div>
+
+</section>
+
+
+<footer>Chúc mừng bạn đã hoàn thành bài học!</footer>
+<script>
+const selectEl = document.getElementById("wordList");
+
+function sortOptionsByNumber() {
+  const opts = Array.from(selectEl.options);
+
+opts.sort((a, b) => {
+
+    const getKey = v => {
+        const m = v.match(/^(\d+)([A-Z]?)$/);
+
+        return {
+            num: parseInt(m[1]),
+            letter: m[2] || ""
+        };
+    };
+
+    const x = getKey(a.value);
+    const y = getKey(b.value);
+
+    if (x.num !== y.num)
+        return x.num - y.num;
+
+    return x.letter.localeCompare(y.letter);
+
+});
+
+  selectEl.innerHTML = "";
+  opts.forEach(o => selectEl.appendChild(o));
+}
+
+// sort ngay khi load
+sortOptionsByNumber();
+
+// sort lại khi mở dropdown
+selectEl.addEventListener("mousedown", sortOptionsByNumber);
+selectEl.addEventListener("touchstart", sortOptionsByNumber);
+</script>
+
+<script>
+/********** DATA **********/
+const data = {
+  1: [
+{ en: "healthy (adj) /ˈhelθi/", vn: "khỏe mạnh, lành mạnh", tick: false },
+{ en: "health (n) /helθ/", vn: "sức khỏe", tick: false },
+{ en: "lifespan (n) /ˈlaɪfspæn/", vn: "tuổi thọ (của một sinh vật)", tick: false },
+{ en: "life expectancy (np) /ˈlaɪf ɪkspektənsi/", vn: "tuổi thọ trung bình", tick: false },
+{ en: "longevity (n) /lɑːnˈdʒevəti/", vn: "sự sống thọ, tuổi thọ lâu dài", tick: false },
+{ en: "centenarian (n) /ˌsentɪˈneriən/", vn: "người sống thọ trên 100 tuổi", tick: false },
+{ en: "diet (n/v) /ˈdaɪət/", vn: "chế độ ăn uống / ăn kiêng", tick: false },
+{ en: "balanced diet (np) /ˌbælənst ˈdaɪət/", vn: "chế độ ăn uống cân bằng", tick: false },
+{ en: "nutritious (adj) /nuːˈtrɪʃəs/", vn: "bổ dưỡng, giàu dinh dưỡng", tick: false },
+{ en: "nutrition (n) /nuːˈtrɪʃn/", vn: "dinh dưỡng, sự nuôi dưỡng", tick: false },
+{ en: "nutrient (n) /ˈnuːtriənt/", vn: "chất dinh dưỡng", tick: false },
+{ en: "workout (n) /ˈwɜːrkaʊt/", vn: "buổi tập luyện thể dục", tick: false },
+{ en: "exercise (n/v) /ˈeksərsaɪz/", vn: "bài tập, sự rèn luyện / tập thể dục", tick: false },
+{ en: "fitness (n) /ˈfɪtnəs/", vn: "sự sung sức, tình trạng thể lực tốt", tick: false },
+{ en: "muscle (n) /ˈmʌsl/", vn: "cơ bắp", tick: false },
+{ en: "strength (n) /streŋkθ/", vn: "sức mạnh, thể lực", tick: false },
+{ en: "strengthen (v) /ˈstreŋkθn/", vn: "củng cố, tăng cường, làm cho mạnh thêm", tick: false },
+{ en: "treatment (n) /ˈtriːtmənt/", vn: "sự điều trị, phương pháp điều trị", tick: false },
+{ en: "treat (v) /triːt/", vn: "điều trị, chữa trị", tick: false },
+{ en: "remedy (n/v) /ˈremədi/", vn: "phương thuốc, biện pháp chữa trị / chữa trị", tick: false },
+{ en: "cure (v/n) /kjʊr/", vn: "chữa khỏi / liều thuốc chữa khỏi (~ for disease)", tick: false },
+{ en: "examine (v) /ɪɡˈzæmɪn/", vn: "khám bệnh, kiểm tra", tick: false },
+{ en: "examination (n) /ɪɡˌzæmɪˈneɪʃn/", vn: "sự khám bệnh, sự kiểm tra", tick: false },
+{ en: "bacterium (n) /bækˈtɪriəm/", vn: "vi khuẩn (số ít)", tick: false },
+{ en: "bacteria (n) /bækˈtɪriə/", vn: "vi khuẩn (số nhiều)", tick: false },
+{ en: "virus (n) /ˈvaɪrəs/", vn: "vi-rút, mầm bệnh", tick: false },
+{ en: "organism (n) /ˈɔːrɡənɪzəm/", vn: "sinh vật, cơ thể sống", tick: false },
+{ en: "infect (v) /ɪnˈfekt/", vn: "lây nhiễm, truyền nhiễm (~ sb with sth)", tick: false },
+{ en: "infection (n) /ɪnˈfekʃn/", vn: "sự nhiễm trùng, bệnh truyền nhiễm", tick: false },
+{ en: "infectious (adj) /ɪnˈfekʃəs/", vn: "dễ lây nhiễm, có tính truyền nhiễm", tick: false },
+{ en: "contagious (adj) /kənˈteɪdʒəs/", vn: "lây qua tiếp xúc trực tiếp", tick: false },
+{ en: "antibiotic (n) /ˌæntibaɪˈɑːtɪk/", vn: "thuốc kháng sinh", tick: false },
+{ en: "vaccine (n) /vækˈsiːn/", vn: "vắc-xin", tick: false },
+{ en: "vaccinate (v) /ˈvæksɪneɪt/", vn: "tiêm vắc-xin (~ sb against sth)", tick: false },
+{ en: "immune system (np) /ɪˈmjuːn sɪstəm/", vn: "hệ miễn dịch", tick: false },
+{ en: "immunity (n) /ɪˈmjuːnəti/", vn: "sự miễn dịch, khả năng kháng bệnh", tick: false },
+{ en: "disease (n) /dɪˈziːz/", vn: "bệnh tật, căn bệnh", tick: false },
+{ en: "illness (n) /ˈɪlnəs/", vn: "sự đau ốm, bệnh tật", tick: false },
+{ en: "cut down on (phr v)", vn: "cắt giảm (tiêu thụ, chi tiêu)", tick: false },
+{ en: "cut out (phr v)", vn: "loại bỏ hoàn toàn, ngừng ăn/uống thứ gì", tick: false },
+{ en: "give up (phr v)", vn: "từ bỏ (thói quen xấu, hút thuốc)", tick: false },
+{ en: "work out (phr v)", vn: "tập thể dục, rèn luyện thể hình", tick: false },
+{ en: "warm up (phr v)", vn: "khởi động (trước khi tập luyện)", tick: false },
+{ en: "get over (phr v)", vn: "hồi phục, vượt qua (bệnh tật, khó khăn)", tick: false },
+{ en: "come down with (phr v)", vn: "bị mắc bệnh nhẹ (cảm cúm, sốt)", tick: false },
+{ en: "pass out (phr v)", vn: "ngất xỉu, bất tỉnh", tick: false },
+{ en: "take up (phr v)", vn: "bắt đầu một thói quen/môn thể thao mới", tick: false },
+{ en: "lead a healthy lifestyle (phr)", vn: "duy trì lối sống lành mạnh", tick: false },
+{ en: "stay in shape (phr)", vn: "giữ dáng, duy trì thể lực tốt", tick: false },
+{ en: "keep fit (phr)", vn: "giữ cơ thể khỏe mạnh, vừa vặn", tick: false },
+{ en: "out of shape (phr)", vn: "cơ thể không cân đối, thể lực kém", tick: false },
+{ en: "build up resistance to sth (phr)", vn: "tăng cường sức đề kháng với cái gì", tick: false },
+{ en: "be in good/poor health (phr)", vn: "có sức khỏe tốt / yếu", tick: false },
+{ en: "prevent disease/illness (phr)", vn: "phòng ngừa bệnh tật", tick: false },
+{ en: "suffer from (phr v)", vn: "chịu đựng, chịu tổn thất, mắc phải (bệnh)", tick: false },
+{ en: "prescribe medicine (phr)", vn: "kê đơn thuốc", tick: false },
+{ en: "under the weather (phr)", vn: "cảm thấy không khỏe, mệt mỏi nhẹ", tick: false },
+{ en: "as fit as a fiddle (phr)", vn: "khỏe như vắng, thể lực rất tốt", tick: false },
+{ en: "a picture of health (phr)", vn: "biểu tượng của sự khỏe mạnh, rất hồng hào", tick: false },
+{ en: "sedentary lifestyle (np) /ˌsednteri ˈlaɪfstaɪl/", vn: "lối sống thụ động, ngồi nhiều ít vận động", tick: false },
+{ en: "mental health (np) /ˌmentl ˈhelθ/", vn: "sức khỏe tinh thần", tick: false },
+{ en: "physical health (np) /ˌfɪzɪkl ˈhelθ/", vn: "sức khỏe thể chất", tick: false },
+{ en: "habit (n) /ˈhæbɪt/", vn: "thói quen", tick: false },
+{ en: "routine (n) /ruːˈtiːn/", vn: "thói quen sinh hoạt hàng ngày", tick: false },
+{ en: "ingredient (n) /ɪnˈɡriːdiənt/", vn: "thành phần (thức ăn, nguyên liệu)", tick: false },
+{ en: "processed food (np) /ˌprɑːsest ˈfuːd/", vn: "thực phẩm đã qua chế biến, đồ đóng hộp", tick: false },
+{ en: "fast food (np) /ˌfæst ˈfuːd/", vn: "thức ăn nhanh", tick: false },
+{ en: "junk food (np) /ˈdʒʌŋk fuːd/", vn: "đồ ăn vặt không lành mạnh", tick: false },
+{ en: "additive (n) /ˈædətɪv/", vn: "chất phụ gia (thực phẩm)", tick: false },
+{ en: "preservative (n) /prɪˈzɜːrvətɪv/", vn: "chất bảo quản", tick: false },
+{ en: "calorie (n) /ˈkæləri/", vn: "calo (đơn vị năng lượng)", tick: false },
+{ en: "calorie intake (np) /ˈkæləri ɪnteɪk/", vn: "lượng calo nạp vào cơ thể", tick: false },
+{ en: "energy (n) /ˈenərdʒi/", vn: "năng lượng", tick: false },
+{ en: "boost (v/n) /buːst/", vn: "tăng cường, thúc đẩy / sự tăng cường", tick: false },
+{ en: "fatigue (n) /fəˈtiːɡ/", vn: "sự mệt mỏi, kiệt sức", tick: false },
+{ en: "exhaustion (n) /ɪɡˈzɔːstʃən/", vn: "sự kiệt sức hoàn toàn", tick: false },
+{ en: "strenuous (adj) /ˈstrenjuəs/", vn: "vất vả, đòi hỏi nhiều thể lực", tick: false },
+{ en: "avoid (v) /əˈvɔɪd/", vn: "tránh, né tránh (~ V-ing)", tick: false },
+{ en: "avoidance (n) /əˈvɔɪdəns/", vn: "sự né tránh", tick: false },
+{ en: "spread (v/n) /spred/", vn: "lây lan, lan rộng / sự lây lan", tick: false },
+{ en: "outbreak (n) /ˈaʊtbreɪk/", vn: "sự bùng phát (dịch bệnh, chiến tranh)", tick: false },
+{ en: "epidemic (n) /ˌepɪˈdemɪk/", vn: "bệnh dịch, dịch bệnh bùng phát", tick: false },
+{ en: "pandemic (n) /pænˈdemɪk/", vn: "đại dịch toàn cầu", tick: false },
+{ en: "prevention (n) /prɪˈvenʃn/", vn: "sự phòng ngừa, sự ngăn chặn", tick: false },
+{ en: "preventative (adj) /prɪˈventətɪv/", vn: "mang tính phòng ngừa", tick: false },
+{ en: "hygiene (n) /ˈhaɪdʒiːn/", vn: "vệ sinh, sự giữ vệ sinh", tick: false },
+{ en: "sanitize (v) /ˈsænɪtaɪz/", vn: "khử trùng, làm sạch vi khuẩn", tick: false },
+{ en: "sanitizer (n) /ˈsænɪtaɪzər/", vn: "dung dịch sát khuẩn, nước rửa tay", tick: false },
+{ en: "organ (n) /ˈɔːrɡən/", vn: "cơ quan (trong cơ thể như tim, gan, phổi)", tick: false },
+{ en: "brain (n) /breɪn/", vn: "não bộ, trí óc", tick: false },
+{ en: "heart (n) /hɑːrt/", vn: "trái tim, tim", tick: false },
+{ en: "lung (n) /lʌŋ/", vn: "phổi", tick: false },
+{ en: "liver (n) /ˈlɪvər/", vn: "gan", tick: false },
+{ en: "digest (v) /daɪˈdʒest/, /dɪˈdʒest/", vn: "tiêu hóa (thức ăn)", tick: false },
+{ en: "digestion (n) /daɪˈdʒestʃən/", vn: "sự tiêu hóa", tick: false },
+{ en: "digestive system (np) /daɪˈdʒestɪv ˈsɪstəm/", vn: "hệ tiêu hóa", tick: false },
+{ en: "attribute sth to sth (phr)", vn: "quy cái gì là do cái gì (~ A to B)", tick: false },
+{ en: "be prone to sth (phr)", vn: "dễ bị, dễ mắc phải (bệnh tật, chấn thương)", tick: false },
+{ en: "be susceptible to sth (phr)", vn: "nhạy cảm, dễ nhiễm (bệnh tật)", tick: false },
+{ en: "take a toll on sth (phr)", vn: "gây hại, ảnh hưởng tiêu cực tới cái gì", tick: false },
+{ en: "recharge one's batteries (phr)", vn: "nạp lại năng lượng, nghỉ ngơi hồi phục", tick: false },
+   ],
+
+  2: [
+
+
+  ],
+  3: [
+
+
+  ],
+
+
+};
+
+const lessonAudios = {
+  1: "audio/lesson1.mp3.wav",
+  2: "audio/lesson2.mp3.mp3",
+  3: "LINK_AUDIO_BAI_3",
+  4: "audio/lesson 4 Vocab.mp3",
+  5: "audio/lesson 5 Vocab.wav",
+  6: "audio/lesson 6 Vocab.mp3",
+  7: "audio/lesson 7 Vocab.wav",
+  8: "audio/lesson 8 Vocab.wav",
+  9: "audio/lesson 9 Vocab.wav",
+  10: "audio/lesson 10 Vocab.wav",
+  11: "audio/lesson 11 Vocab.wav",
+  12: "audio/lesson 11 Vocab.wav",
+  13: "LINK_AUDIO_BAI_3",
+  14: "LINK_AUDIO_BAI_3",
+  15: "LINK_AUDIO_BAI_3",
+
+
+};
+
+let currList = 1,
+    listCopy = [],
+    index = 0;
+
+let totalWords = 0;
+let knownCount = 0;
+
+let reviewMode = "vn-en";
+
+// Trạng thái Hiện / Ẩn nghĩa
+let meaningsVisible = true;
+
+/********** LOAD LIST **********/
+function loadList(){
+
+  currList = document.getElementById("wordList").value;
+
+  listCopy = [...data[currList]];
+
+  totalWords = listCopy.length;
+
+  knownCount = 0;
+
+  updateCounter();
+
+  renderWords();
+
+  loadExercises();
+
+  setMode(reviewMode);
+
+}
+
+function updateCounter(){
+  document.getElementById("progressCounter").innerText =
+    `Đã biết ${knownCount} / ${totalWords}`;
+}
+function setMode(mode){
+
+   reviewMode = mode;
+
+   document.getElementById("btnVNEN")
+      .style.background =
+      mode==="vn-en"
+      ? "#ffb3ba"
+      : "#a0e7e5";
+
+   document.getElementById("btnENVN")
+      .style.background =
+      mode==="en-vn"
+      ? "#ffb3ba"
+      : "#a0e7e5";
+
+   nextWord();
+
+}
+
+document.getElementById("wordList").onchange = loadList;
+loadList();
+
+function speakWord(text){
+
+  speechSynthesis.cancel();
+
+  let cleanText = text;
+
+  // bỏ phiên âm /.../
+  cleanText = cleanText.split("/")[0];
+
+  // bỏ loại từ (n), (v), (adj), (phr v)...
+  cleanText = cleanText.replace(/\(.*?\)/g,"").trim();
+
+  const utter = new SpeechSynthesisUtterance(cleanText);
+
+  utter.lang = "en-US";
+  utter.rate = 1;
+  utter.pitch = 1;
+  utter.volume = 1;
+
+  speechSynthesis.speak(utter);
+}
+
+/********** RENDER & SORT **********/
+function renderWords(){
+
+  const box = document.getElementById("wordContainer");
+
+  box.innerHTML = "";
+
+  // Nếu đang ở chế độ ẩn nghĩa
+  // thì danh sách mới cũng phải ẩn nghĩa
+  if (!meaningsVisible) {
+      box.classList.add("hide-all-meanings");
+  } else {
+      box.classList.remove("hide-all-meanings");
+  }
+
+
+  let sorted = [...data[currList]].sort((a,b)=>b.tick - a.tick);
+
+  sorted.forEach(item=>{
+
+    let realIndex = data[currList].indexOf(item);
+
+    box.innerHTML += `
+      <div class="word-row">
+
+        <span class="word-text">
+
+          <span 
+            class="en-word"
+            onclick="toggleOneMeaning(this)"
+            title="Click để hiện / ẩn nghĩa"
+          >
+            ${item.en}:
+          </span>
+
+          <span class="vn-word">
+            ${item.vn}
+          </span>
+
+          <i class="fa-solid fa-volume-high speaker-icon"
+             onclick="event.stopPropagation();speakWord(\`${item.en}\`)">
+          </i>
+
+        </span>
+
+        <input
+          type="checkbox"
+          ${item.tick ? "checked" : ""}
+          onclick="event.stopPropagation(); toggleTick(${realIndex})">
+
+      </div>
+    `;
+  });
+
+}
+
+/********** HIỆN / ẨN NGHĨA **********/
+
+// Nút Hiện / Ẩn toàn bộ nghĩa
+function toggleAllMeanings() {
+
+    const wordList = document.getElementById("wordContainer");
+    const button = document.getElementById("toggleMeaningBtn");
+    const meanings = wordList.querySelectorAll(".vn-word");
+
+    meaningsVisible = !meaningsVisible;
+
+    if (meaningsVisible) {
+
+        // HIỆN TẤT CẢ
+        wordList.classList.remove("hide-all-meanings");
+
+        meanings.forEach(word => {
+            word.classList.remove("show-individual");
+            word.style.visibility = "visible";
+        });
+
+        button.innerHTML = "🙈 Ẩn nghĩa";
+
+    } else {
+
+        // ẨN TẤT CẢ
+        wordList.classList.add("hide-all-meanings");
+
+        meanings.forEach(word => {
+            word.classList.remove("show-individual");
+            word.style.visibility = "";
+        });
+
+        button.innerHTML = "👁️ Hiện nghĩa";
+    }
+}
+
+
+// Click từng từ tiếng Anh
+function toggleOneMeaning(enWord) {
+
+    const vnWord = enWord.nextElementSibling;
+
+    if (!vnWord) return;
+
+
+    // Nếu đang ẨN TOÀN BỘ
+    // click từ nào thì hiện riêng nghĩa từ đó
+    if (!meaningsVisible) {
+
+        vnWord.classList.toggle("show-individual");
+
+    } 
+    
+    // Nếu đang HIỆN TOÀN BỘ
+    // click từ nào thì ẩn / hiện riêng từ đó
+    else {
+
+        if (vnWord.style.visibility === "hidden") {
+
+            vnWord.style.visibility = "visible";
+
+        } else {
+
+            vnWord.style.visibility = "hidden";
+
+        }
+
+    }
+}
+
+/********** TICK UPDATE **********/
+function toggleTick(realIndex){
+  data[currList][realIndex].tick = !data[currList][realIndex].tick;
+  renderWords();
+}
+
+/********** REVIEW **********/
+function nextWord(){
+  document.getElementById("answer").innerHTML="";
+  if(listCopy.length===0){
+    document.getElementById("vietWord").innerHTML="🎉 Bạn đã học xong hết!";
+    return;
+  }
+  index=Math.floor(Math.random()*listCopy.length);
+if(reviewMode==="vn-en"){
+
+document.getElementById("vietWord").innerHTML =
+listCopy[index].vn;
+
+}
+else{
+
+document.getElementById("vietWord").innerHTML =
+listCopy[index].en;
+
+}
+}
+
+function know(){
+  firework();
+  knownCount++;
+  listCopy.splice(index,1);
+  updateCounter();
+  nextWord();
+}
+
+function dontKnow(){
+
+if(reviewMode==="vn-en"){
+
+document.getElementById("answer").innerHTML =
+listCopy[index].en;
+
+}
+else{
+
+document.getElementById("answer").innerHTML =
+listCopy[index].vn;
+
+}
+
+}
+/********** EXERCISES **********/
+function loadExercises(){
+  const box=document.getElementById("exercise");
+  box.innerHTML="";
+  exercises[currList].forEach((item,i)=>{
+    box.innerHTML+=`
+    <div style="margin:10px 0;">
+      ${i+1}. ${item.q}
+      <input id="ex${i}">
+      <button onclick="checkEx(${i})">Check</button>
+      <span id="res${i}" class="result"></span>
+    </div>`;
+  });
+}
+
+function checkEx(i){
+  const user = document.getElementById("ex"+i).value.trim().toLowerCase();
+  const ans = exercises[currList][i].a.toLowerCase();
+  const box = document.getElementById("res"+i);
+
+  if(user === ans) {
+    box.innerHTML = "✔ Correct";
+    box.style.color = "#28a745"; // chữ Correct màu xanh lá
+    firework(); // gọi pháo hoa
+  } else {
+    box.innerHTML = "✘ " + exercises[currList][i].a;
+    box.style.color = "#D02752"; // chữ sai màu đỏ
+  }
+}
+
+/********** FIREWORK **********/
+function firework(){
+  for(let i=0;i<25;i++){
+    const c=document.createElement("div");
+    c.className="confetti";
+    c.style.setProperty("--x",(Math.random()-.5)*600+"px");
+    c.style.setProperty("--y",(Math.random()-.5)*600+"px");
+    c.style.backgroundColor=`hsl(${Math.random()*360},90%,60%)`;
+    document.body.appendChild(c);
+    setTimeout(()=>c.remove(),900);
+  }
+}
+</script>
+
+<script>
+/* =========================================================
+   🐸 FROG VOCABULARY HUNT
+   ========================================================= */
+
+let frogGameWords = [];
+let frogQuestionDeck = [];
+let frogCurrentWord = null;
+
+let frogContinuousCorrect = 0;
+let frogWrongStreak = 0;
+let frogCorrectTotal = 0;
+
+let frogGameEnded = false;
+
+/* =========================================================
+   LẤY NGHĨA ĐẦU TIÊN
+   Ví dụ:
+   "tham gia, gia nhập, kết nối"
+   → "tham gia"
+   ========================================================= */
+
+function getFirstMeaning(vn) {
+
+  if (!vn) return "";
+
+  return vn
+    .split(",")[0]
+    .trim();
+
+}
+
+
+/* =========================================================
+   LẤY TỪ TIẾNG ANH SẠCH
+   "join (v) /dʒɔɪn/"
+   → "join"
+   ========================================================= */
+
+function getCleanEnglish(en) {
+
+  if (!en) return "";
+
+  let word = en;
+
+  // bỏ phần IPA
+  word = word.split("/")[0];
+
+  // bỏ loại từ
+  word = word.replace(/\(.*?\)/g, "");
+
+  return word.trim();
+
+}
+
+
+/* =========================================================
+   ÂM THANH NHẸ - KHÔNG CẦN FILE MP3
+   ========================================================= */
+
+let frogAudioContext = null;
+
+function frogSound(type) {
+
+  try {
+
+    if (!frogAudioContext) {
+      frogAudioContext =
+        new (window.AudioContext ||
+             window.webkitAudioContext)();
+    }
+
+    const ctx = frogAudioContext;
+
+    if (ctx.state === "suspended") {
+      ctx.resume();
+    }
+
+
+    // =====================================
+    // 🪰 ẾCH ĂN ĐÚNG
+    // =====================================
+    if (type === "correct") {
+
+      // Âm "boing" chính
+      const osc1 = ctx.createOscillator();
+      const gain1 = ctx.createGain();
+
+      osc1.type = "sine";
+
+      osc1.frequency.setValueAtTime(
+        420,
+        ctx.currentTime
+      );
+
+      osc1.frequency.exponentialRampToValueAtTime(
+        900,
+        ctx.currentTime + 0.16
+      );
+
+      gain1.gain.setValueAtTime(
+        0.0001,
+        ctx.currentTime
+      );
+
+      gain1.gain.exponentialRampToValueAtTime(
+        0.22,
+        ctx.currentTime + 0.025
+      );
+
+      gain1.gain.exponentialRampToValueAtTime(
+        0.0001,
+        ctx.currentTime + 0.18
+      );
+
+      osc1.connect(gain1);
+      gain1.connect(ctx.destination);
+
+      osc1.start();
+      osc1.stop(ctx.currentTime + 0.2);
+
+
+      // Âm "ting" nhỏ khi bắt được ruồi
+      const osc2 = ctx.createOscillator();
+      const gain2 = ctx.createGain();
+
+      osc2.type = "triangle";
+
+      osc2.frequency.setValueAtTime(
+        950,
+        ctx.currentTime + 0.08
+      );
+
+      osc2.frequency.exponentialRampToValueAtTime(
+        1400,
+        ctx.currentTime + 0.22
+      );
+
+      gain2.gain.setValueAtTime(
+        0.0001,
+        ctx.currentTime
+      );
+
+      gain2.gain.exponentialRampToValueAtTime(
+        0.12,
+        ctx.currentTime + 0.09
+      );
+
+      gain2.gain.exponentialRampToValueAtTime(
+        0.0001,
+        ctx.currentTime + 0.25
+      );
+
+      osc2.connect(gain2);
+      gain2.connect(ctx.destination);
+
+      osc2.start(ctx.currentTime + 0.08);
+      osc2.stop(ctx.currentTime + 0.28);
+
+      return;
+    }
+
+
+    // =====================================
+    // ❌ SAI
+    // =====================================
+    if (type === "wrong") {
+
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+
+      osc.type = "sawtooth";
+
+      osc.frequency.setValueAtTime(
+        180,
+        ctx.currentTime
+      );
+
+      osc.frequency.exponentialRampToValueAtTime(
+        75,
+        ctx.currentTime + 0.25
+      );
+
+      gain.gain.setValueAtTime(
+        0.0001,
+        ctx.currentTime
+      );
+
+      gain.gain.exponentialRampToValueAtTime(
+        0.13,
+        ctx.currentTime + 0.02
+      );
+
+      gain.gain.exponentialRampToValueAtTime(
+        0.0001,
+        ctx.currentTime + 0.28
+      );
+
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+
+      osc.start();
+      osc.stop(ctx.currentTime + 0.3);
+
+      return;
+    }
+
+
+    // =====================================
+    // 🎉 THẮNG
+    // =====================================
+    if (type === "win") {
+
+      [523, 659, 784, 1046].forEach(
+        (freq, i) => {
+
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+
+          osc.type = "sine";
+
+          const start =
+            ctx.currentTime + i * 0.09;
+
+          osc.frequency.setValueAtTime(
+            freq,
+            start
+          );
+
+          gain.gain.setValueAtTime(
+            0.0001,
+            start
+          );
+
+          gain.gain.exponentialRampToValueAtTime(
+            0.14,
+            start + 0.02
+          );
+
+          gain.gain.exponentialRampToValueAtTime(
+            0.0001,
+            start + 0.18
+          );
+
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+
+          osc.start(start);
+          osc.stop(start + 0.2);
+        }
+      );
+
+      return;
+    }
+
+
+    // =====================================
+    // 💦 THUA
+    // =====================================
+    if (type === "lose") {
+
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+
+      osc.type = "triangle";
+
+      osc.frequency.setValueAtTime(
+        350,
+        ctx.currentTime
+      );
+
+      osc.frequency.exponentialRampToValueAtTime(
+        80,
+        ctx.currentTime + 0.5
+      );
+
+      gain.gain.setValueAtTime(
+        0.0001,
+        ctx.currentTime
+      );
+
+      gain.gain.exponentialRampToValueAtTime(
+        0.15,
+        ctx.currentTime + 0.03
+      );
+
+      gain.gain.exponentialRampToValueAtTime(
+        0.0001,
+        ctx.currentTime + 0.55
+      );
+
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+
+      osc.start();
+      osc.stop(ctx.currentTime + 0.6);
+    }
+
+  } catch (e) {
+    console.log("Frog sound error:", e);
+  }
+}
+
+/* =========================================================
+   RANDOM
+   ========================================================= */
+
+function frogRandom(arr) {
+
+  return arr[
+    Math.floor(Math.random() * arr.length)
+  ];
+
+}
+
+function createFrogQuestionDeck() {
+
+  const currentData = data[currList] || [];
+
+  // Sao chép danh sách từ vựng
+  frogQuestionDeck = [...currentData];
+
+  // Xáo ngẫu nhiên toàn bộ danh sách
+  for (let i = frogQuestionDeck.length - 1; i > 0; i--) {
+
+    const j = Math.floor(Math.random() * (i + 1));
+
+    [
+      frogQuestionDeck[i],
+      frogQuestionDeck[j]
+    ] = [
+      frogQuestionDeck[j],
+      frogQuestionDeck[i]
+    ];
+  }
+
+  console.log(
+    "🐸 Frog question deck:",
+    frogQuestionDeck.map(word => getCleanEnglish(word.en))
+  );
+}
+
+
+/* =========================================================
+   TẠO 4 ĐÁP ÁN
+   ========================================================= */
+
+function createFrogOptions(correctWord) {
+
+  const currentData = data[currList] || [];
+
+  const correctEnglish =
+    getCleanEnglish(correctWord.en);
+
+  let pool = currentData
+    .filter(item =>
+      getCleanEnglish(item.en) !== correctEnglish
+    );
+
+  // lấy 3 từ sai
+  pool.sort(() => Math.random() - .5);
+
+  let options = [
+    correctWord,
+    ...pool.slice(0, 3)
+  ];
+
+  // nếu bài có ít hơn 4 từ
+  // vẫn không làm game crash
+  options = options.slice(0, 4);
+
+  return options.sort(
+    () => Math.random() - .5
+  );
+
+}
+
+
+/* =========================================================
+   VẼ 4 CON RUỒI
+   ========================================================= */
+
+function renderFrogFlies() {
+
+  const zone =
+    document.getElementById("flyZone");
+
+  zone.innerHTML = "";
+
+  if (!frogCurrentWord) return;
+
+  const options =
+    createFrogOptions(frogCurrentWord);
+
+  options.forEach((item, index) => {
+
+    const fly =
+      document.createElement("div");
+
+    fly.className =
+      `vocab-fly fly-${index}`;
+
+    fly.dataset.correct =
+      getCleanEnglish(item.en) ===
+      getCleanEnglish(frogCurrentWord.en)
+        ? "true"
+        : "false";
+
+    const body =
+      document.createElement("div");
+
+    body.className = "fly-body";
+
+    const face =
+      document.createElement("span");
+
+    face.className = "fly-face";
+
+    face.innerHTML = "🪰";
+
+    const word =
+      document.createElement("span");
+
+    word.textContent =
+      getCleanEnglish(item.en);
+
+    body.appendChild(face);
+    body.appendChild(word);
+
+    fly.appendChild(body);
+
+    fly.onclick =
+      () => catchFrogFly(fly);
+
+    zone.appendChild(fly);
+
+  });
+
+}
+
+
+/* =========================================================
+   BẮT RUỒI
+   ========================================================= */
+
+function catchFrogFly(fly) {
+
+  if (frogGameEnded) return;
+
+  // tránh click nhiều lần
+  if (fly.dataset.clicked === "true") return;
+
+  fly.dataset.clicked = "true";
+
+  const isCorrect =
+    fly.dataset.correct === "true";
+
+if (isCorrect) {
+
+    frogCorrect(fly);
+
+} else {
+
+    frogWrong(fly);
+
+}
+}
+
+
+/* =========================================================
+   ĐÚNG
+   ========================================================= */
+
+function frogCorrect(targetFly) {
+
+  frogSound("correct");
+
+  frogContinuousCorrect++;
+
+  frogWrongStreak = 0;
+
+  frogCorrectTotal++;
+
+  updateFrogScore();
+
+animateTongue(targetFly);
+
+  growFrog();
+
+  setTimeout(() => {
+
+    if (frogContinuousCorrect >= 10) {
+
+      frogWin(
+        "🔥 10 câu liên tục chính xác!"
+      );
+
+      return;
+
+    }
+
+    // Nếu đã ăn hết từ của bài
+if (frogQuestionDeck.length === 0) {
+
+  frogWin(
+    "🐸 Ếch đã hoàn thành một vòng toàn bộ từ vựng của bài!"
+  );
+
+  return;
+}
+
+
+    nextFrogQuestion();
+
+  }, 500);
+
+
+targetFly.style.pointerEvents = "none";
+
+setTimeout(() => {
+
+  targetFly.style.opacity = "0";
+  targetFly.style.transform = "scale(0.2)";
+
+}, 220);
+
+}
+
+
+
+
+
+/* =========================================================
+   SAI
+   ========================================================= */
+
+function frogWrong() {
+
+  frogSound("wrong");
+
+  frogWrongStreak++;
+
+  frogContinuousCorrect = 0;
+
+  updateFrogScore();
+
+  shrinkFrog();
+
+  // hiệu ứng rung game
+  const game =
+    document.getElementById("frogGame");
+
+  game.animate(
+    [
+      { transform: "translateX(0)" },
+      { transform: "translateX(-8px)" },
+      { transform: "translateX(8px)" },
+      { transform: "translateX(-5px)" },
+      { transform: "translateX(0)" }
+    ],
+    {
+      duration: 280
+    }
+  );
+
+  if (frogWrongStreak >= 2) {
+
+    setTimeout(() => {
+
+      frogLose();
+
+    }, 350);
+
+    return;
+
+  }
+
+  // Cho HS chọn lại câu hiện tại
+  setTimeout(() => {
+
+    const flies =
+      document.querySelectorAll(".vocab-fly");
+
+    flies.forEach(fly => {
+
+      fly.dataset.clicked = "false";
+
+    });
+
+  }, 300);
+
+}
+
+
+/* =========================================================
+   LƯỠI ẾCH
+   ========================================================= */
+
+function animateTongue(targetFly) {
+
+  const tongue = document.getElementById("frogTongue");
+  const game = document.getElementById("frogGame");
+  const mouth = document.querySelector(".frog-mouth");
+
+  if (!targetFly || !mouth || !game) return;
+
+  // Tọa độ của game
+  const gameRect = game.getBoundingClientRect();
+
+  // =========================
+  // ĐIỂM XUẤT PHÁT = MIỆNG ẾCH
+  // =========================
+  const mouthRect = mouth.getBoundingClientRect();
+
+  const startX =
+    mouthRect.left +
+    mouthRect.width / 2 -
+    gameRect.left;
+
+  const startY =
+    mouthRect.top +
+    mouthRect.height / 2 -
+    gameRect.top;
+
+
+  // =========================
+  // ĐIỂM ĐẾN = TÂM BẢNG RUỒI
+  // =========================
+  const flyRect = targetFly.getBoundingClientRect();
+
+  const targetX =
+    flyRect.left +
+    flyRect.width / 2 -
+    gameRect.left;
+
+  const targetY =
+    flyRect.top +
+    flyRect.height / 2 -
+    gameRect.top;
+
+
+  // =========================
+  // TÍNH HƯỚNG
+  // =========================
+  const dx = targetX - startX;
+  const dy = targetY - startY;
+
+  const distance = Math.sqrt(
+    dx * dx + dy * dy
+  );
+
+  const angle =
+    Math.atan2(dy, dx) * 180 / Math.PI;
+
+
+  // =========================
+  // ĐẶT LƯỠI ĐÚNG TẠI MIỆNG
+  // =========================
+  tongue.style.left = startX + "px";
+  tongue.style.top = startY + "px";
+
+  tongue.style.width = "0px";
+  tongue.style.height = "8px";
+
+  tongue.style.transformOrigin = "0 50%";
+
+  tongue.style.transform =
+    `rotate(${angle}deg)`;
+
+
+  // =========================
+  // KÍCH HOẠT ANIMATION
+  // =========================
+  tongue.classList.remove("active");
+
+  // ép trình duyệt render lại
+  void tongue.offsetWidth;
+
+  tongue.classList.add("active");
+
+  // kéo lưỡi tới đúng bảng ruồi
+  requestAnimationFrame(() => {
+    tongue.style.width = distance + "px";
+  });
+
+
+  // =========================
+  // THU LƯỠI LẠI
+  // =========================
+  setTimeout(() => {
+
+    tongue.style.width = "0px";
+
+    setTimeout(() => {
+      tongue.classList.remove("active");
+    }, 280);
+
+  }, 400);
+}
+
+/* =========================================================
+   ẾCH LỚN DẦN
+   ========================================================= */
+
+function growFrog() {
+
+  const frog =
+    document.getElementById("frogCharacter");
+
+  frog.classList.remove(
+    "shrink1",
+    "shrink2"
+  );
+
+  if (frogContinuousCorrect >= 7) {
+
+    frog.classList.add("grow3");
+
+  } else if (frogContinuousCorrect >= 4) {
+
+    frog.classList.add("grow2");
+
+  } else if (frogContinuousCorrect >= 2) {
+
+    frog.classList.add("grow1");
+
+  }
+
+}
+
+
+/* =========================================================
+   ẾCH NHỎ DẦN
+   ========================================================= */
+
+function shrinkFrog() {
+
+  const frog =
+    document.getElementById("frogCharacter");
+
+  frog.classList.remove(
+    "grow1",
+    "grow2",
+    "grow3"
+  );
+
+  if (frogWrongStreak === 1) {
+
+    frog.classList.add("shrink1");
+
+  }
+
+  if (frogWrongStreak >= 2) {
+
+    frog.classList.add("shrink2");
+
+  }
+
+}
+
+
+/* =========================================================
+   SCORE
+   ========================================================= */
+
+function updateFrogScore() {
+
+  const score =
+    document.getElementById("frogScore");
+
+  score.innerHTML =
+    `🔥 Liên tục: ${frogContinuousCorrect}/10
+     &nbsp; | &nbsp;
+     ❌ ${frogWrongStreak}/2`;
+
+}
+
+
+/* =========================================================
+   CÂU TIẾP THEO
+   ========================================================= */
+
+function nextFrogQuestion() {
+
+  if (frogGameEnded) return;
+
+
+  // Không có dữ liệu
+  if (!frogQuestionDeck.length) {
+
+    frogWin(
+      "🐸 Ếch đã đi hết một vòng toàn bộ từ vựng của bài!"
+    );
+
+    return;
+  }
+
+
+  // =====================================
+  // LẤY TỪ TIẾP THEO TRONG BỘ ĐÃ XÁO
+  // =====================================
+
+  frogCurrentWord = frogQuestionDeck.shift();
+
+
+  // Hiển thị nghĩa đầu tiên
+  document.getElementById("frogQuestion").innerText =
+    getFirstMeaning(frogCurrentWord.vn);
+
+
+  // Tạo 4 lựa chọn
+  renderFrogFlies();
+}
+
+/* =========================================================
+   WIN
+   ========================================================= */
+
+function frogWin(reason) {
+
+  frogGameEnded = true;
+
+  frogSound("win");
+
+  document.getElementById(
+    "frogMessageTitle"
+  ).innerHTML =
+    "🎉 TUYỆT VỜI!";
+
+  document.getElementById(
+    "frogMessageText"
+  ).innerHTML =
+    `${reason}<br><br>
+     🐸 Ếch đã trở thành vua của ao!`;
+
+  document.getElementById(
+    "frogMessage"
+  ).classList.add("show");
+
+}
+
+
+/* =========================================================
+   LOSE
+   ========================================================= */
+
+function frogLose() {
+
+  frogGameEnded = true;
+
+  frogSound("lose");
+
+  document.getElementById(
+    "frogMessageTitle"
+  ).innerHTML =
+    "💦 Ôi! Ếch bị hụt mất rồi!";
+
+  document.getElementById(
+    "frogMessageText"
+  ).innerHTML =
+    `Bạn sai 2 lần liên tục.<br>
+     Đừng lo, thử lại và bắt ruồi thật chính xác nhé! 🐸`;
+
+  document.getElementById(
+    "frogMessage"
+  ).classList.add("show");
+
+}
+
+
+/* =========================================================
+   START GAME
+   ========================================================= */
+
+function startFrogGame() {
+
+  frogGameEnded = false;
+
+  frogContinuousCorrect = 0;
+  frogWrongStreak = 0;
+  frogCorrectTotal = 0;
+
+  frogCurrentWord = null;
+
+
+  // =====================================
+  // TẠO BỘ CÂU HỎI MỚI
+  // =====================================
+
+  createFrogQuestionDeck();
+
+
+  // =====================================
+  // ĐÓNG MÀN HÌNH START / GAME OVER
+  // =====================================
+
+  document
+    .getElementById("frogMessage")
+    .classList.remove("show");
+
+
+  // =====================================
+  // RESET ẾCH
+  // =====================================
+
+  const frog =
+    document.getElementById("frogCharacter");
+
+  frog.classList.remove(
+    "grow1",
+    "grow2",
+    "grow3",
+    "shrink1",
+    "shrink2"
+  );
+
+
+  // =====================================
+  // RESET SCORE
+  // =====================================
+
+  updateFrogScore();
+
+
+  // =====================================
+  // BẮT ĐẦU CÂU HỎI ĐẦU TIÊN
+  // =====================================
+
+  nextFrogQuestion();
+}
+
+
+
+</script>
+
+
+</body>
+</html>
