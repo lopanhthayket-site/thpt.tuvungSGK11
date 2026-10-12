@@ -1073,6 +1073,10 @@ css
     <option value="2B">Từ vựng SGK -2B</option>
     <option value="3A">Từ vựng SGK -3A</option>
     <option value="3B">Từ vựng SGK -3B</option>
+    <option value="4A">Từ vựng SGK -4A</option>
+    <option value="4B">Từ vựng SGK -4B</option>
+    <option value="5A">Từ vựng SGK -5A</option>
+    <option value="5B">Từ vựng SGK -5B</option>
 
   </select>
 
@@ -1508,10 +1512,116 @@ const data = {
   ],
 
   "3A": [
-
+  { en: "city of the future (np)", vn: "thành phố của tương lai", tick: false },
+  { en: "smart city (np) /smɑːrt ˈsɪti/", vn: "thành phố thông minh", tick: false },
+  { en: "sustainable (adj) /səˈsteɪnəbl/", vn: "bền vững, duy trì lâu dài", tick: false },
+  { en: "sustainable city (np) /səˈsteɪnəbl ˈsɪti/", vn: "thành phố phát triển bền vững", tick: false },
+  { en: "sustainability (n) /səˌsteɪnəˈbɪləti/", vn: "sự phát triển bền vững", tick: false },
+  { en: "urban planning (np) /ˈɜːrbən ˈplænɪŋ/", vn: "quy hoạch đô thị", tick: false },
+  { en: "urban planner (np) /ˈɜːrbən ˈplænər/", vn: "nhà quy hoạch đô thị", tick: false },
+  { en: "urbanization (n) /ˌɜːrbənəˈzeɪʃn/", vn: "sự đô thị hóa", tick: false },
+  { en: "infrastructure (n) /ˈɪnfrəstrʌktʃər/", vn: "cơ sở hạ tầng", tick: false },
+  { en: "skyscraper (n) /ˈskaɪskreɪpər/", vn: "tòa nhà chọc trời", tick: false },
+  { en: "high-rise building (np) /haɪ raɪz ˈbɪldɪŋ/", vn: "tòa nhà cao tầng", tick: false },
+  { en: "residential (adj) /ˌrezɪˈdenʃl/", vn: "thuộc khu dân cư, dùng để ở", tick: false },
+  { en: "residential area (np) /ˌrezɪˈdenʃl ˈeriə/", vn: "khu dân cư", tick: false },
+  { en: "resident (n) /ˈrezɪdənt/", vn: "cư dân, người sinh sống", tick: false },
+  { en: "pedestrian zone (np) /pəˈdestriən zoʊn/", vn: "phố đi bộ, khu vực dành cho người đi bộ", tick: false },
+  { en: "green space (np) /ɡriːn speɪs/", vn: "không gian xanh", tick: false },
+  { en: "roof garden (np) /ruːf ˈɡɑːrdn/", vn: "vườn trên mái nhà", tick: false },
+  { en: "vertical farming (np) /ˈvɜːrtɪkl ˈfɑːrmɪŋ/", vn: "mô hình nông nghiệp thẳng đứng / canh tác trên tầng cao", tick: false },
+  { en: "renewable (adj) /rɪˈnuːəbl/", vn: "có thể tái tạo (năng lượng, tài nguyên)", tick: false },
+  { en: "renewable energy (np) /rɪˈnuːəbl ˈenərdʒi/", vn: "năng lượng tái tạo", tick: false },
+  { en: "solar panel (np) /ˈsoʊlər ˈpænl/", vn: "tấm pin năng lượng mặt trời", tick: false },
+  { en: "wind turbine (np) /ˈwɪnd tɜːrbaɪn/", vn: "tua-bin gió", tick: false },
+  { en: "public transport (np) /ˌpʌblɪk ˈtrænspɔːrt/", vn: "phương tiện giao thông công cộng", tick: false },
+  { en: "electric vehicle (np) /ɪˈlektrɪk ˈviːəkl/ = EV", vn: "xe điện", tick: false },
+  { en: "driverless car (np) /ˌdraɪvərləs kɑːr/", vn: "xe tự lái", tick: false },
+  { en: "autonomous vehicle (np) /ɔːˈtɑːnəməs ˈviːəkl/", vn: "phương tiện tự hành", tick: false },
+  { en: "autonomous (adj) /ɔːˈtɑːnəməs/", vn: "tự chủ, tự hành (máy móc, xe cộ)", tick: false },
+  { en: "traffic congestion (np) /ˈtræfɪk kənˈdʒestʃən/", vn: "tình trạng ùn tắc giao thông", tick: false },
+  { en: "carbon emissions (np) /ˈkɑːrbən iˈmɪʃnz/", vn: "lượng khí thải carbon", tick: false },
+  { en: "carbon footprint (np) /ˌkɑːrbən ˈfʊtprɪnt/", vn: "lượng khí thải carbon cá nhân/đô thị", tick: false },
+  { en: "waste treatment (np) /weɪst ˈtriːtmənt/", vn: "xử lý rác thải", tick: false },
+  { en: "recycling plant (np) /ˌriːˈsaɪklɪŋ plænt/", vn: "nhà máy tái chế", tick: false },
+  { en: "quality of life (np) /ˈkwɑːləti əv laɪf/", vn: "chất lượng cuộc sống", tick: false },
+  { en: "livable (adj) /ˈlɪvəbl/", vn: "đáng sống (thành phố)", tick: false },
+  { en: "livability (n) /ˌlɪvəˈbɪləti/", vn: "khả năng/mức độ đáng sống", tick: false },
+  { en: "overcrowded (adj) /ˌoʊvərˈkraʊdɪd/", vn: "quá đông đúc, quá tải dân số", tick: false },
+  { en: "overpopulation (n) /ˌoʊvərˌpɑːpjuˈleɪʃn/", vn: "bùng nổ / quá tải dân số", tick: false },
+  { en: "dwell (v) /dwel/", vn: "cư ngụ, ở", tick: false },
+  { en: "dweller (n) /ˈdwelər/", vn: "cư dân (ví dụ: city dweller - cư dân thành thị)", tick: false },
+  { en: "dwelling (n) /ˈdwelɪŋ/", vn: "nhà ở, chỗ ở", tick: false },
+  { en: "operate (v) /ˈɑːpəreɪt/", vn: "vận hành, hoạt động", tick: false },
+  { en: "operation (n) /ˌɑːpəˈreɪʃn/", vn: "sự vận hành, hoạt động", tick: false },
+  { en: "efficiency (n) /ɪˈfɪʃnsi/", vn: "hiệu suất, năng suất", tick: false },
+  { en: "efficient (adj) /ɪˈfɪʃnt/", vn: "có hiệu quả, hiệu suất cao", tick: false },
+  { en: "sensor (n) /ˈsensər/", vn: "cảm biến", tick: false },
+  { en: "install (v) /ɪnˈstɔːl/", vn: "lắp đặt, cài đặt", tick: false },
+  { en: "installation (n) /ˌɪnstəˈleɪʃn/", vn: "sự lắp đặt", tick: false },
 
   ],
   "3B": [
+  { en: "modernize (v) /ˈmɑːdərnaɪz/", vn: "hiện đại hóa", tick: false },
+  { en: "modernization (n) /ˌmɑːdərnəˈzeɪʃn/", vn: "sự hiện đại hóa", tick: false },
+  { en: "innovative (adj) /ˈɪnəveɪtɪv/", vn: "mang tính đổi mới, sáng tạo", tick: false },
+  { en: "innovation (n) /ˌɪnəˈveɪʃn/", vn: "sự đổi mới, sáng tạo", tick: false },
+  { en: "biodegradable (adj) /ˌbaɪoʊdɪˈɡreɪdəbl/", vn: "có thể phân hủy sinh học", tick: false },
+  { en: "eco-friendly (adj) /ˌiːkoʊ ˈfrendli/", vn: "thân thiện với môi trường", tick: false },
+  { en: "state-of-the-art (adj) /ˌsteɪt əv ði ˈɑːrt/", vn: "tân tiến, hiện đại nhất", tick: false },
+  { en: "cutting-edge (adj) /ˌkʌtɪŋ ˈedʒ/", vn: "tiên tiến, hàng đầu (công nghệ)", tick: false },
+  { en: "futuristic (adj) /ˌfjuːtʃəˈrɪstɪk/", vn: "thuộc về tương lai, mang phong cách tương lai", tick: false },
+  { en: "compact (adj) /kəmˈpækt/", vn: "nhỏ gọn, nén chặt", tick: false },
+  { en: "sustainable (adj) /səˈsteɪnəbl/", vn: "bền vững", tick: false },
+  { en: "sustainability (n) /səˌsteɪnəˈbɪləti/", vn: "sự bền vững", tick: false },
+  { en: "upgrade (v/n) /ˌʌpˈɡreɪd/", vn: "nâng cấp", tick: false },
+  { en: "transform (v) /trænsˈfɔːrm/", vn: "biến đổi hoàn toàn", tick: false },
+  { en: "transformation (n) /ˌtrænsfərˈmeɪʃn/", vn: "sự biến đổi", tick: false },
+  { en: "interconnect (v) /ˌɪntərkəˈnekt/", vn: "kết nối lẫn nhau", tick: false },
+  { en: "interconnected (adj) /ˌɪntərkəˈnektɪd/", vn: "có kết nối liên thông", tick: false },
+  { en: "interconnection (n) /ˌɪntərkəˈnekʃn/", vn: "sự kết nối lẫn nhau", tick: false },
+  { en: "monitor (v) /ˈmɑːnɪtər/", vn: "giám sát, theo dõi", tick: false },
+  { en: "optimise (v) /ˈɑːptɪmaɪz/", vn: "tối ưu hóa", tick: false },
+  { en: "optimization (n) /ˌɑːptɪməˈzeɪʃn/", vn: "sự tối ưu hóa", tick: false },
+  { en: "predict (v) /prɪˈdɪkt/", vn: "dự đoán", tick: false },
+  { en: "prediction (n) /prɪˈdɪkʃn/", vn: "sự dự đoán", tick: false },
+  { en: "predictable (adj) /prɪˈdɪktəbl/", vn: "có thể dự đoán trước", tick: false },
+  { en: "unpredictable (adj) /ˌʌnprɪˈdɪktəbl/", vn: "khó đoán trước", tick: false },
+  { en: "cope with (phr v)", vn: "đối phó, xử lý (áp lực, thách thức đô thị)", tick: false },
+  { en: "carry out (phr v)", vn: "thực hiện, tiến hành (dự án, nghiên cứu)", tick: false },
+  { en: "phase out (phr v)", vn: "loại bỏ dần dần (nhiên liệu hóa thạch, xe chạy xăng)", tick: false },
+  { en: "cut down on (phr v)", vn: "cắt giảm (khí thải, năng lượng tiêu thụ)", tick: false },
+  { en: "wipe out (phr v)", vn: "xóa sổ, loại bỏ hoàn toàn", tick: false },
+  { en: "switch to (phr v)", vn: "chuyển sang (sử dụng nguồn năng lượng mới)", tick: false },
+  { en: "set up (phr v)", vn: "thiết lập, thành lập (hệ thống, mô hình)", tick: false },
+  { en: "lead to (phr v)", vn: "dẫn đến kết quả", tick: false },
+  { en: "result in (phr v)", vn: "dẫn đến, gây ra", tick: false },
+  { en: "result from (phr v)", vn: "do nguyên nhân từ", tick: false },
+  { en: "speed up (phr v)", vn: "đẩy nhanh tiến độ", tick: false },
+  { en: "slow down (phr v)", vn: "làm chậm lại", tick: false },
+  { en: "pave the way for (phr)", vn: "mở đường cho, tạo điều kiện cho", tick: false },
+  { en: "play a key role in (phr)", vn: "đóng vai trò then chốt trong", tick: false },
+  { en: "in harmony with (phr)", vn: "hòa hợp với (thiên nhiên)", tick: false },
+  { en: "at the forefront of (phr)", vn: "ở vị trí tiên phong trong", tick: false },
+  { en: "give rise to (phr)", vn: "làm nảy sinh, gây ra", tick: false },
+  { en: "stand the test of time (idiom)", vn: "trường tồn theo thời gian", tick: false },
+  { en: "a double-edged sword (idiom)", vn: "con dao hai lưỡi (công nghệ/đô thị hóa)", tick: false },
+
+  ],
+
+  "4A": [
+
+
+  ],
+  "4B": [
+
+  ],
+
+  "5A": [
+
+
+  ],
+  "5B": [
 
   ],
 
